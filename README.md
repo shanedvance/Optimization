@@ -1,7 +1,9 @@
 # Optimization
 
+AI and Optimization alogithms that make use of Parallel Processing.
+
 1. Local Search
-2. Evolutionary Algorithm
+2. Evolutionary Algorithm (using stochastic gradient descent)
     * Genetic Algorithm
     * Differential Evolution
 3. Swarm Optimization
