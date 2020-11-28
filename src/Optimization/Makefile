@@ -3,7 +3,7 @@
 # Optimization (CS 471)
 # May 22, 2018
 #
-# 'make depend' uses makedepend to automatically generate dependencies 
+# 'make depend' uses makedepend to automatically generate dependencies
 #               (dependencies are added to end of Makefile)
 # 'make'        build executable file 'GAFitness'
 # 'make clean'  removes all .o and executable files
@@ -20,12 +20,12 @@ INCLUDES=-I../include
 #   their path using -Lpath, something like:
 LFLAGS = -L../lib
 # define any libraries to link into executable:
-#   if I want to link in libraries (libx.so or libx.a) I use the -llibname 
+#   if I want to link in libraries (libx.so or libx.a) I use the -llibname
 #   option, something like (this will link in libmylib.so and libm.so:
 LIBS=-lm
 # define the C source files
 SRCS=main.cpp stdafx.cpp BenchmarkRun.cpp Benchmark.cpp ConstraintsFile.cpp SwarmIntelligence.cpp
-# define the C object files 
+# define the C object files
 #
 # This uses Suffix Replacement within a macro:
 #   $(name:string1=string2)
@@ -34,21 +34,21 @@ SRCS=main.cpp stdafx.cpp BenchmarkRun.cpp Benchmark.cpp ConstraintsFile.cpp Swar
 # with the .o suffix
 #
 OBJS = $(SRCS:.c=.o)
-# define the executable file 
-MAIN=SIFitness
+# define the executable file
+MAIN=Optimization
 #
-# The following part of the makefile is generic; it can be used to 
+# The following part of the makefile is generic; it can be used to
 # build any executable just by changing the definitions above and by
 # deleting dependencies appended to the file from 'make depend'
 #
 .PHONY: depend clean
 all:	$(MAIN)
 	@echo  Simple compiler named SIFitness has been compiled
-$(MAIN): $(OBJS) 
+$(MAIN): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
 # this is a suffix replacement rule for building .o's from .c's
 # it uses automatic variables $<: the name of the prerequisite of
-# the rule(a .c file) and $@: the name of the target of the rule (a .o file) 
+# the rule(a .c file) and $@: the name of the target of the rule (a .o file)
 # (see the gnu make manual section about automatic variables)
 .c.o:
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
