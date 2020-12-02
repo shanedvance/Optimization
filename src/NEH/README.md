@@ -2,53 +2,32 @@
 
 ## Compile
 
-### Option 1
-
 ```bash
-> g++ -Wall -w -O2 -std=c++11 main.cpp FSS.cpp FSSB.cpp FSSNW.cpp NEH.cpp -o NEH
-```
-
-### Option 2
-
-```bash
-> make
+$ make
 ```
 
 ## Run
 
-### Option 1
-
-> If there's a single file
+### Single file
 
 ```bash
-> ./NEH <file_name>
+$ ./NEH <file_name>
 ```
 
-#### Example
+### Multiple files
 
 ```bash
-> ./NEH Taillard_Series/1.txt
-```
-
-### Option 2
-
-> If there are many file in directory
-
-```bash
-> ./Run.sh <file_path> <output_filename>
-```
-
-#### Example
-
-```bash
-> ./Run.sh Taillard_Series Results.csv
+$ chmod +x run.sh
+$ ./run.sh <file_path> <output_filename>
 ```
 
 ## Notes
 
-1. To make `Run.sh` have executable privileges type this command `chmod +x Run.sh`.
-1. NEH heuristic algorithm analysis for Flow-shop Scheduling (FSS), Flow-shop Scheduling with Blocking (FSSB) and Flow-shop.
-1. Scheduling with No-Wait (FSSNW) of the Taillard data sets. This will find the best job schedule given the NEH algorithm for Johnson's algorithm implementation. It takes the first two jobs and finds the best solution of the partial permutation. This continues by adding one job to the sequence each time, while L>3.
+1. `NEH` heuristic algorithm analysis for Flow-shop Scheduling (`FSS`), Flow-shop Scheduling with Blocking (`FSSB`), and Flow-shop.
+1. Scheduling with No-Wait (`FSSNW`) of the `Taillard` data sets.
+    1. Finds the best job schedule given the `NEH` algorithm for the `Johnson's algorithm` implementation.
+    1. It takes the first two jobs and finds the best solution of the partial permutation.
+    1. The process continues by adding one job to the sequence each time, while `L>3`.
 
 ---
 

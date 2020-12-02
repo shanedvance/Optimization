@@ -1,33 +1,31 @@
 # AI and Optimization Algorithms
 
+## Prerequisites
+
+* GNU Compiler
+  * Used by [OpenMP](https://www.openmp.org/) for multi-threading.
+
+## Required files
+
+* [Shekel's_Foxhole_Data.txt](Shekel's_Foxhole_Data.txt)
+* [constraints.csv](constraints.csv)
+
 ## Compile
 
-### Option 1
-
 ```bash
-> g++ -Wall -w -std=c++11 -O2 -U__STRICT_ANSI__ main.cpp stdafx.cpp BenchmarkRun.cpp Benchmark.cpp ConstraintsFile.cpp SwarmIntelligence.cpp -o Optimization
-```
-
-### Option 2
-
-```bash
-> make
+$ make
 ```
 
 ## Run
 
 ```bash
-> ./Optimization
+$ ./Optimization
 ```
 
 ## Notes
 
-1. Requires you to have a GNU compiler, usually installed on most devices, as it uses [OpenMP](https://www.openmp.org/) for threading.
-1. The `Shekel's_Foxhole_Data.txt` is necessary for this program to work as the fitness function requires it.
-1. The `constraints.csv` file is necessary as this contains all the necessary parameters for each function; such as its range, iterations, parameters, etc.
-1. The user can refresh the constraints file by selecting option 3.
-1. After executing the compiled program the results will be saved in
-1. The file name of your choice (remember to put `*.csv` since it is comma-delimited).
+1. A user can refresh the constraints file by selecting option 3.
+1. After executing the compiled program, the results will be saved in a file name (ending in `.csv`) of your choice.
 
 ---
 
