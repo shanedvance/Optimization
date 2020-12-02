@@ -24,7 +24,7 @@ LFLAGS = -L../lib
 #   option, something like (this will link in libmylib.so and libm.so:
 LIBS=-lm
 # define the C source files
-SRCS=main.cpp stdafx.cpp BenchmarkRun.cpp Benchmark.cpp ConstraintsFile.cpp SwarmIntelligence.cpp
+SRCS=main.cpp stdafx.cpp BenchmarkRun.cpp Benchmark.cpp ConstraintsFile.cpp GeneticAlgorithms.cpp LocalSearch.cpp SwarmIntelligence.cpp
 # define the C object files
 #
 # This uses Suffix Replacement within a macro:
